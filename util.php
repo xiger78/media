@@ -114,6 +114,47 @@ class util
 		$html->clear();
 		unset($html);
     }
+    /*
+    function getTorrentTop($categoryStr,$keyWord)
+    {
+		//require_once('simple_html_dom.php');
+
+		//failed to open stream http request failed http/1.1 403 forbidden 
+		//file_get_contents에서 에러가 나서 추가한 세줄
+		ini_set("user_agent","Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0)");
+		ini_set("max_execution_time", 0);
+		ini_set("memory_limit", "10000M");
+
+		//게시판 리스트 설정
+		$boardList;
+		$i=0;
+
+		//토렌트다운로드 URL생성
+		$linkUrl = "http://torrtop.com/bbs/download.php?bo_table=torrent_movie_tt&";
+		//wr_id를 추출하기위해 문자열길이 계산
+		$delLinkSize = strlen("../bbs/board.php?bo_table=".$categoryStr."&wr_id=");
+		
+		//검색어가 없을때
+		if(strlen($keyWord)==0){
+			$html = file_get_contents('http://torrtop.com/bbs/board.php?bo_table=torrent_movie_tt&sca='. $categoryStr );
+		}else{
+		//검색어가 있을때
+			$html = file_get_contents('http://torrtop.com/bbs/board.php?bo_table=torrent_movie_tt&sca=' . $categoryStr . '&frame=&sfl=wr_subject%7C%7Cwr_content&sop=and&stx=' . $keyWord);
+		}
+
+		//웹사이트 텍스트파일로 저장
+		//var_dump($html);
+		//게시판의 리스트 추출
+		$vars=explode('\n', $html));
+		var_dump($vars);
+		
+		//exec("rm -f ./test.txt");
+		//exec("rm -f ./grep.txt");
+		//exec("rm -f ./list.txt");
+
+		unset($html);
+    }
+    */
 }
 //$util = new util();
 //$dev=$util->getSysInfo();

@@ -54,18 +54,26 @@
 <B><?php echo $resultStr;?></B>
 <BR>※사용설명서)<BR>
 1.&nbsp;다운로드할 검색어를 입력합니다.<BR>
-2.&nbsp;검색 버튼을 클릭합니다.<BR>
+2.&nbsp;검색 버튼을 클릭합니다.<BR><BR>
 <?php
 include "util.php";
 $util = new util();
 $sysinfo=$util->getSysInfo();
 ?>
 <?php echo "==서버정보==";?>
-<table>
-<tr><td><?php echo "전체용량";?></td><td><?php echo $sysinfo['sda1']['Size'];?></td></tr>
-<tr><td><?php echo "사용량";?></td><td><?php echo $sysinfo['sda1']['Used'];?></td></tr>
-<tr><td><?php echo "남은용량"?></td><td><?php echo $sysinfo['sda1']['Avail'];?></td></tr>
-<tr><td><?php echo "사용율";?></td><td><?php echo $sysinfo['sda1']['User'];?></td></tr>
+<table border=1 width=180px>
+<tr><td colspan="2"><?php echo "SD메모리";?></td></tr>
+<tr><td width=90px><?php echo "전체용량";?></td><td align="right"><?php echo $sysinfo['/dev/root']['Size'];?></td></tr>
+<tr><td><?php echo "사용량";?></td><td align="right"><?php echo $sysinfo['/dev/root']['Used'];?></td></tr>
+<tr><td><?php echo "남은용량"?></td><td align="right"><?php echo $sysinfo['/dev/root']['Avail'];?></td></tr>
+<tr><td><?php echo "사용율";?></td><td align="right"><?php echo $sysinfo['/dev/root']['User'];?></td></tr>
+</table><BR>
+<table border=1 width=180px>
+<tr><td colspan="2"><?php echo "외장하드";?></td></tr>
+<tr><td width=90px><?php echo "전체용량";?></td><td align="right"><?php echo $sysinfo['sda1']['Size'];?></td></tr>
+<tr><td><?php echo "사용량";?></td><td align="right"><?php echo $sysinfo['sda1']['Used'];?></td></tr>
+<tr><td><?php echo "남은용량"?></td><td align="right"><?php echo $sysinfo['sda1']['Avail'];?></td></tr>
+<tr><td><?php echo "사용율";?></td><td align="right"><?php echo $sysinfo['sda1']['User'];?></td></tr>
 </table>
 </body>
 </html>
