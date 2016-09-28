@@ -1,0 +1,9 @@
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root        15G  4.2G  9.6G  31% /
+devtmpfs        119M     0  119M   0% /dev
+tmpfs           123M     0  123M   0% /dev/shm
+tmpfs           123M  8.8M  114M   8% /run
+tmpfs           5.0M  4.0K  5.0M   1% /run/lock
+tmpfs           123M     0  123M   0% /sys/fs/cgroup
+/dev/mmcblk0p1   60M   20M   41M  34% /boot
+tmpfs            25M  4.0K   25M   1% /run/user/1000
