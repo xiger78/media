@@ -47,3 +47,4 @@ exec("curl ipv4.icanhazip.com", $getip, $return_var);
 <a href="http://<?=$getip[0]?>/media/"><B>토렌트검색화면</B></a><BR><BR><a href="http://<?=$getip[0]?>:9091"><B>다운로드현황보기</B></a>
 </body>
 </html>
+test
