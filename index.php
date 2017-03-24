@@ -21,8 +21,9 @@
             	return false;
             }
             
-            //location.href="insert.php?windows="+param+"&keyword=" + document.frm.txtKeyWord.value;
-            document.frm.action="insert.php?windows="+param+"&keyword=" + document.frm.txtKeyWord.value;
+            //location.href="view.php?windows="+param+"&keyword=" + document.frm.txtKeyWord.value;
+            //document.frm.action="insert.php?windows="+param+"&keyword=" + document.frm.txtKeyWord.value;
+            document.frm.action="view.php?windows="+param+"&keyword=" + document.frm.txtKeyWord.value;
             document.frm.submit();
         }
         </script>
@@ -39,18 +40,17 @@
 		        <tr>
 		            <td>
 		            <!--onKeyPress="if(event.keyCode == 13) alert('검색버튼을 눌러주세요.');return false;"-->
-		                    <input type="text" name="txtKeyWord" id="txtKeyWord" value="" size="25px" style="width:100%;height:50px">
+		                <input type="text" name="txtKeyWord" id="txtKeyWord" value="" size="25px" style="width:100%;height:50px">
 		            </td>
 		            <td>
-		                    <input type="submit" name="btnRun" id="btnRun" value="검색" onClick="javascript:insert(1)" style="width:80px;height:50px">
-		                
+		                <input type="submit" name="btnRun" id="btnRun" value="검색" onClick="javascript:insert(1)" style="width:80px;height:50px">
 		            </td>
 		        </tr>
 		    </table>
 		</td>
 	</tr>
 </table>
-						</form>
+</form>
 <B><?php echo $resultStr;?></B>
 <BR>※사용설명서)<BR>
 1.&nbsp;다운로드할 검색어를 입력합니다.<BR>
