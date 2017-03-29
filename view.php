@@ -15,10 +15,11 @@ if(isset($_POST["cyear"]) && isset($_POST["cmonth"])){
 }
 	
 $query="select
-            id,             -- no 		0
-            title,          -- title 		1
-            download_link,  -- file         	2
-            regdate         -- regdate		3
+            id,             -- no 		    0
+            title,          -- title      1
+            img_url,        -- img_url    2
+            download_link,  -- file     	3
+            regdate         -- regdate		4
         from 
             torrentData
 	      where
@@ -68,6 +69,7 @@ function filedown()
         <tr>
            <!--<th>순서</th>-->
            <th>선택</th>
+           <th>포스터</th>
            <th>제목</th>
         </tr>
            <?php
@@ -75,12 +77,14 @@ function filedown()
            ?>
            <tr >
                <td align="center" width="20%">
-
-                   <input type="checkbox" name="selects<?=$rs[0];?>" id="selects<?=$rs[0];?>" style="width:50px;height:80px">
+                   <input type="checkbox" name="selects<?=$rs[0]?>" id="selects<?=$rs[0]?>" style="width:50px;height:80px">
                </td>
+               <td align="center">
+                   <img src="<?=$rs[2]?>">
+               </td>               
                <td width="80%" style="word-break: break-all;">
-                   <?php echo str_replace('\'','',$rs[1]);?>
-                   <input type="hidden" name="url<?=$rs[0];?>" id="url<?=$rs[0];?>" value="<?=$rs[2];?>">
+                   <?=$rs[1]?>
+                   <input type="hidden" name="url<?=$rs[0]?>" id="url<?=$rs[0]?>" value="<?=$rs[3]?>">
                </td>
            </tr>
            <?php

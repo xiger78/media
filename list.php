@@ -3,9 +3,10 @@
 
 	$query="select
 				id,             -- no 			0
-				title, 		-- title 		1
-				download_link,  -- file         	2
-				regdate 	-- regdate		3
+				img_url,	-- img  		1
+				title, 		-- title 		2	
+				download_link,  -- file         	3
+				regdate 	-- regdate		4
 			from 
 				torrentData
 			order by id desc ";
@@ -28,6 +29,7 @@
 		<table border="1" width="100%" cellspacing="0" cellpadding="1" bordercolor="#333333">
 			<tr>
 				<th>no</th>
+				<th>poster</th>
 				<th>title</th>
 				<th>regdate</th>
 			</tr>
@@ -36,12 +38,13 @@
 			while($rs=mysql_fetch_row($row)) {
 			?>
 			<tr >
-				<td id="no">
+				<td id="no" align="center">
 					<?=$row_num?>
 					<input type="hidden" name="no" id="no" value=<?=$rs[0]?>>
 				</td>
-				<td id="title"><?=$rs[1]?></td>
-				<td id="regdate"><?=$rs[3]?></td>
+				<td id="img"><img src="<?=$rs[1]?>"></td>
+				<td id="title"><?=$rs[2]?></td>
+				<td id="regdate"><?=$rs[4]?></td>
 			</tr>
 			<?php
 			// end roof
