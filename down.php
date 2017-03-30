@@ -8,6 +8,8 @@
 <?php
     function file_download($url){
         exec('transmission-remote -a ' . $url, $result); 
+//echo $url."<br>";
+//var_dump($result);
     }
 	
     $i = 1;
