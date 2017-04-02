@@ -12,7 +12,7 @@ require_once 'simple_html_dom.php';
 //토렌트 사이트의 카테고리명 정의
 $category = array ( "torrent_movielatest","torrent_ent", "torrent_drama", "torrent_sisa", "torrent_movieko" );
 //페이지수 정의
-#$pages = array ("p1","p2","p3","p4","p5","p6","p7","p8","p9","p10");
+//$pages = array ("p1","p2","p3","p4","p5","p6","p7","p8","p9","p10");
 $pages = array ("p1");
 
 $sql = " insert into torrentData(title, img_url, url, download_link) values";
