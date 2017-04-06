@@ -80,7 +80,7 @@ function filedown()
                    <input type="checkbox" name="selects<?=$rs[0]?>" id="selects<?=$rs[0]?>" style="width:50px;height:80px">
                </td>
                <td align="center">
-                   <img src="<?=$rs[2]?>">
+                   <img src="<?=$rs[2]?>" width="100px" height="150px">
                </td>               
                <td width="80%" style="word-break: break-all;">
                    <?=$rs[1]?>

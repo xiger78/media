@@ -42,7 +42,7 @@
 					<?=$row_num?>
 					<input type="hidden" name="no" id="no" value=<?=$rs[0]?>>
 				</td>
-				<td id="img"><img src="<?=$rs[1]?>"></td>
+				<td id="img"><img src="<?=$rs[1]?>" width="100px" height="150px"></td>
 				<td id="title"><?=$rs[2]?></td>
 				<td id="regdate"><?=$rs[4]?></td>
 			</tr>
