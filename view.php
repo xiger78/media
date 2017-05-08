@@ -15,20 +15,18 @@ if(isset($_POST["cyear"]) && isset($_POST["cmonth"])){
 }
 	
 $query="select
-            id,             -- no 		    0
-            title,          -- title      1
-            img_url,        -- img_url    2
-            download_link,  -- file     	3
-            regdate         -- regdate		4
+            id,            
+            title,          
+            img_url,        
+            download_link,  
+            regdate      
         from 
             torrentData
 	      where
-            title like '%". $_GET['keyword'] ."%' AND
-            EXTRACT(YEAR_MONTH FROM regdate)='". $curdate  ."' 
+            title like '%". $_GET['keyword'] ."%' 
             order by id desc ";
 	
 $row=mysql_query ( $query, $cid ) or die(mysql_error());
-
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
