@@ -5,10 +5,6 @@ import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-import socket
-import fcntl
-import struct
-
 import subprocess
 import sys
 
